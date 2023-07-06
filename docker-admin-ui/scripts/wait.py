@@ -28,7 +28,7 @@ def main():
     if auth_method not in ("basic", "casa"):
         raise ValueError(f"Unsupported authentication method {auth_method}")
 
-    ssa_file = os.environ.get("GLUU_SSA_FILE", "/etc/jans/conf/ssa")
+    ssa_file = os.environ.get("GLUU_SSA_FILE", "/etc/jans/")
     if not os.path.exists(ssa_file):
         raise ValueError(
             f"The required SSA file is not found (default to {ssa_file}); "
