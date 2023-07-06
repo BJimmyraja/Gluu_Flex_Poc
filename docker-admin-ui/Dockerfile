@@ -196,7 +196,7 @@ LABEL org.opencontainers.image.url="ghcr.io/gluufederation/flex/admin-ui" \
     org.opencontainers.image.description=""
 
 RUN mkdir -p /etc/jans/conf /etc/certs
-COPY ssa /etc/jans/conf
+COPY ssa /etc/jans/conf/
 COPY templates /app/templates/
 COPY scripts /app/scripts/
 RUN chmod +x /app/scripts/entrypoint.sh
